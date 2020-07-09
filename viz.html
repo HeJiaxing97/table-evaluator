@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Viz &mdash; table evaluator 15-08-2019 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Metrics" href="metrics.html" />
+    <link rel="prev" title="TableEvaluator" href="table_evaluator.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> table evaluator
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="table_evaluator.html">TableEvaluator</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Viz</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="metrics.html">Metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">table evaluator</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Viz</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/viz.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="viz">
+<h1>Viz<a class="headerlink" href="#viz" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-table_evaluator.viz"></span><dl class="py function">
+<dt id="table_evaluator.viz.cdf">
+<code class="sig-prename descclassname">table_evaluator.viz.</code><code class="sig-name descname">cdf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_r</span></em>, <em class="sig-param"><span class="n">data_f</span></em>, <em class="sig-param"><span class="n">xlabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'Values'</span></em>, <em class="sig-param"><span class="n">ylabel</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'Cumulative Sum'</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.viz.cdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot continous density function on optionally given ax. If no ax, cdf is plotted and shown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_r</strong> – Series with real data</p></li>
+<li><p><strong>data_f</strong> – Series with fake data</p></li>
+<li><p><strong>xlabel</strong> – Label to put on the x-axis</p></li>
+<li><p><strong>ylabel</strong> – Label to put on the y-axis</p></li>
+<li><p><strong>ax</strong> – The axis to plot on. If ax=None, a new figure is created.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="table_evaluator.viz.plot_correlation_comparison">
+<code class="sig-prename descclassname">table_evaluator.viz.</code><code class="sig-name descname">plot_correlation_comparison</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">evaluators</span><span class="p">:</span> <span class="n">List</span></em>, <em class="sig-param"><span class="n">annot</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.viz.plot_correlation_comparison" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the correlation differences of multiple TableEvaluator objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>evaluators</strong> – list of TableEvaluator objects</p></li>
+<li><p><strong>annot</strong> (<em>boolean</em>) – Whether to annotate the plots with numbers.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="table_evaluator.viz.plot_correlation_difference">
+<code class="sig-prename descclassname">table_evaluator.viz.</code><code class="sig-name descname">plot_correlation_difference</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">real</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">fake</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">plot_diff</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">cat_cols</span><span class="p">:</span> <span class="n">list</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annot</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.viz.plot_correlation_difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the association matrices for the <cite>real</cite> dataframe, <cite>fake</cite> dataframe and plot the difference between them. Has support for continuous and Categorical
+(Male, Female) data types. All Object and Category dtypes are considered to be Categorical columns if <cite>dis_cols</cite> is not passed.</p>
+<ul class="simple">
+<li><p>Continuous - Continuous: Uses Pearson’s correlation coefficient</p></li>
+<li><p>Continuous - Categorical: Uses so called correlation ratio (<a class="reference external" href="https://en.wikipedia.org/wiki/Correlation_ratio">https://en.wikipedia.org/wiki/Correlation_ratio</a>) for both continuous - categorical and categorical - continuous.</p></li>
+<li><p>Categorical - Categorical: Uses Theil’s U, an asymmetric correlation metric for Categorical associations</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>real</strong> – DataFrame with real data</p></li>
+<li><p><strong>fake</strong> – DataFrame with synthetic data</p></li>
+<li><p><strong>plot_diff</strong> – Plot difference if True, else not</p></li>
+<li><p><strong>cat_cols</strong> – List of Categorical columns</p></li>
+<li><p><strong>annot</strong> (<em>boolean</em>) – Whether to annotate the plot with numbers indicating the associations.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="table_evaluator.viz.plot_mean_std">
+<code class="sig-prename descclassname">table_evaluator.viz.</code><code class="sig-name descname">plot_mean_std</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">real</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">fake</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.viz.plot_mean_std" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the means and standard deviations of each dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>real</strong> – DataFrame containing the real data</p></li>
+<li><p><strong>fake</strong> – DataFrame containing the fake data</p></li>
+<li><p><strong>ax</strong> – Axis to plot on. If none, a new figure is made.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="table_evaluator.viz.plot_mean_std_comparison">
+<code class="sig-prename descclassname">table_evaluator.viz.</code><code class="sig-name descname">plot_mean_std_comparison</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">evaluators</span><span class="p">:</span> <span class="n">List</span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.viz.plot_mean_std_comparison" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot comparison between the means and standard deviations from each evaluator in evaluators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>evaluators</strong> – list of TableEvaluator objects that are to be evaluated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="table_evaluator.viz.plot_var_cor">
+<code class="sig-prename descclassname">table_evaluator.viz.</code><code class="sig-name descname">plot_var_cor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>pandas.core.frame.DataFrame<span class="p">, </span>numpy.ndarray<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">return_values</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>numpy.ndarray<span class="p">]</span><a class="headerlink" href="#table_evaluator.viz.plot_var_cor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a DataFrame, plot the correlation between columns. Function assumes all numeric continuous data. It masks the top half of the correlation matrix,
+since this holds the same values.</p>
+<p>Decomissioned for use of the dython associations function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Dataframe to plot data from</p></li>
+<li><p><strong>ax</strong> – Axis on which to plot the correlations</p></li>
+<li><p><strong>return_values</strong> – return correlation matrix after plotting</p></li>
+<li><p><strong>kwargs</strong> – Keyword arguments that are passed to <cite>sns.heatmap</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If return_values=True, returns correlation matrix of <cite>x</cite> as np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="metrics.html" class="btn btn-neutral float-right" title="Metrics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="table_evaluator.html" class="btn btn-neutral float-left" title="TableEvaluator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Bauke Brenninkmeijer
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

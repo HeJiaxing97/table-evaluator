@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TableEvaluator &mdash; table evaluator 15-08-2019 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Viz" href="viz.html" />
+    <link rel="prev" title="Welcome to table evaluator’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> table evaluator
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">TableEvaluator</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="viz.html">Viz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics.html">Metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">table evaluator</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>TableEvaluator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/table_evaluator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tableevaluator">
+<h1>TableEvaluator<a class="headerlink" href="#tableevaluator" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-table_evaluator.table_evaluator"></span><dl class="py class">
+<dt id="table_evaluator.table_evaluator.TableEvaluator">
+<em class="property">class </em><code class="sig-prename descclassname">table_evaluator.table_evaluator.</code><code class="sig-name descname">TableEvaluator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">real</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">fake</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">cat_cols</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unique_thresh</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">metric</span><span class="o">=</span><span class="default_value">'pearsonr'</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">n_samples</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">1337</span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for evaluating synthetic data. It is given the real and fake data and allows the user to easily evaluate data with the <cite>evaluate</cite> method.
+Additional evaluations can be done with the different methods of evaluate and the visual evaluation method.</p>
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.column_correlations">
+<code class="sig-name descname">column_correlations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.column_correlations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function around <cite>metrics.column_correlation</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Column correlations between <code class="docutils literal notranslate"><span class="pre">self.real</span></code> and <code class="docutils literal notranslate"><span class="pre">self.fake</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.convert_numerical">
+<code class="sig-name descname">convert_numerical</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>pandas.core.frame.DataFrame<span class="p">, </span>pandas.core.frame.DataFrame<span class="p">]</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.convert_numerical" title="Permalink to this definition">¶</a></dt>
+<dd><p>Special function to convert dataset to a numerical representations while making sure they have identical columns. This is sometimes a problem with
+categorical columns with many values or very unbalanced values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Real and fake dataframe with categorical columns one-hot encoded and binary columns factorized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.correlation_correlation">
+<code class="sig-name descname">correlation_correlation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.correlation_correlation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the correlation coefficient between the association matrices of self.real and self.fake using self.comparison_metric</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The correlation coefficient</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.correlation_distance">
+<code class="sig-name descname">correlation_distance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">how</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'euclidean'</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.correlation_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate distance between correlation matrices with certain metric.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>how</strong> – metric to measure distance. Choose from [<code class="docutils literal notranslate"><span class="pre">euclidean</span></code>, <code class="docutils literal notranslate"><span class="pre">mae</span></code>, <code class="docutils literal notranslate"><span class="pre">rmse</span></code>].</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>distance between the association matrices in the chosen evaluation metric. Default: Euclidean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.estimator_evaluation">
+<code class="sig-name descname">estimator_evaluation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target_col</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">target_type</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'class'</span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.estimator_evaluation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to do full estimator evaluation, including training. And estimator is either a regressor or a classifier, depending on the task. Two sets are
+created of each of the estimators <cite>S_r</cite> and <cite>S_f</cite>, for the real and fake data respectively. <cite>S_f</cite> is trained on <code class="docutils literal notranslate"><span class="pre">self.real</span></code> and <cite>S_r</cite> on
+<code class="docutils literal notranslate"><span class="pre">self.fake</span></code>. Then, both are evaluated on their own and the others test set. If target_type is <code class="docutils literal notranslate"><span class="pre">regr</span></code> we do a regression on the RMSE scores with
+Pearson’s. If target_type is <code class="docutils literal notranslate"><span class="pre">class</span></code>, we calculate F1 scores and do return <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-</span> <span class="pre">MAPE(F1_r,</span> <span class="pre">F1_f)</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_col</strong> – which column should be considered the target both both the regression and classification task.</p></li>
+<li><p><strong>target_type</strong> – what kind of task this is. Can be either <code class="docutils literal notranslate"><span class="pre">class</span></code> or <code class="docutils literal notranslate"><span class="pre">regr</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Correlation value or 1 - MAPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target_col</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">target_type</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'class'</span></em>, <em class="sig-param"><span class="n">metric</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n_samples_distance</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">20000</span></em><span class="sig-paren">)</span> &#x2192; Dict<a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine correlation between attributes from the real and fake dataset using a given metric.
+All metrics from scipy.stats are available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_col</strong> – column to use for predictions with estimators</p></li>
+<li><p><strong>target_type</strong> – what kind of task to perform on the target_col. Can be either <code class="docutils literal notranslate"><span class="pre">class</span></code> for classification or <code class="docutils literal notranslate"><span class="pre">regr</span></code> for regression.</p></li>
+<li><p><strong>metric</strong> – overwrites self.metric. Scoring metric for the attributes.
+By default Pearson’s r is used. Alternatives include Spearman rho (scipy.stats.spearmanr) or Kendall Tau (scipy.stats.kendalltau).</p></li>
+<li><p><strong>n_samples_distance</strong> – The number of samples to take for the row distance. See documentation of <code class="docutils literal notranslate"><span class="pre">tableEvaluator.row_distance</span></code> for details.</p></li>
+<li><p><strong>verbose</strong> – whether to print verbose logging.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.fit_estimators">
+<code class="sig-name descname">fit_estimators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.fit_estimators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit self.r_estimators and self.f_estimators to real and fake data, respectively.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.get_copies">
+<code class="sig-name descname">get_copies</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">return_len</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; Union<span class="p">[</span>pandas.core.frame.DataFrame<span class="p">, </span>int<span class="p">]</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.get_copies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether any real values occur in the fake data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>return_len</strong> – whether to return the length of the copied rows or not.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe containing the duplicates if return_len=False, else integer indicating the number of copied rows.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.get_duplicates">
+<code class="sig-name descname">get_duplicates</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">return_values</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>Union<span class="p">[</span>pandas.core.frame.DataFrame<span class="p">, </span>int<span class="p">]</span><span class="p">, </span>Union<span class="p">[</span>pandas.core.frame.DataFrame<span class="p">, </span>int<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.get_duplicates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return duplicates within each dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>return_values</strong> – whether to return the duplicate values in the datasets. If false, the lengths are returned.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dataframe with duplicates or the length of those dataframes if return_values=False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.pca_correlation">
+<code class="sig-name descname">pca_correlation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lingress</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.pca_correlation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the relation between PCA explained variance values. Due to some very large numbers, in recent implementation the MAPE(log) is used instead of
+regressions like Pearson’s r.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lingress</strong> – whether to use a linear regression, in this case Pearson’s.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the correlation coefficient if lingress=True, otherwise 1 - MAPE(log(real), log(fake))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.plot_correlation_difference">
+<code class="sig-name descname">plot_correlation_difference</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plot_diff</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.plot_correlation_difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the association matrices for each table and, if chosen, the difference between them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plot_diff</strong> – whether to plot the difference</p></li>
+<li><p><strong>kwargs</strong> – kwargs for sns.heatmap</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.plot_cumsums">
+<code class="sig-name descname">plot_cumsums</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nr_cols</span><span class="o">=</span><span class="default_value">4</span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.plot_cumsums" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the cumulative sums for all columns in the real and fake dataset. Height of each row scales with the length of the labels. Each plot contains the
+values of a real columns and the corresponding fake column.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.plot_distributions">
+<code class="sig-name descname">plot_distributions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nr_cols</span><span class="o">=</span><span class="default_value">3</span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.plot_distributions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the distribution plots for all columns in the real and fake dataset. Height of each row of plots scales with the length of the labels. Each plot
+contains the values of a real columns and the corresponding fake column.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.plot_mean_std">
+<code class="sig-name descname">plot_mean_std</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.plot_mean_std" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class wrapper function for plotting the mean and std using <cite>viz.plot_mean_std</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.plot_pca">
+<code class="sig-name descname">plot_pca</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.plot_pca" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the first two components of a PCA of real and fake data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.row_distance">
+<code class="sig-name descname">row_distance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_samples</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>float<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.row_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate mean and standard deviation distances between <cite>self.fake</cite> and <cite>self.real</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n_samples</strong> – Number of samples to take for evaluation. Compute time increases exponentially.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>(mean, std)</cite> of these distances.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.score_estimators">
+<code class="sig-name descname">score_estimators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.score_estimators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get F1 scores of self.r_estimators and self.f_estimators on the fake and real data, respectively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dataframe with the results for each estimator on each data test set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.statistical_evaluation">
+<code class="sig-name descname">statistical_evaluation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.statistical_evaluation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the correlation coefficient between the basic properties of self.real and self.fake using Spearman’s Rho. Spearman’s is used because these
+values can differ a lot in magnitude, and Spearman’s is more resilient to outliers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>correlation coefficient</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="table_evaluator.table_evaluator.TableEvaluator.visual_evaluation">
+<code class="sig-name descname">visual_evaluation</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_evaluator.table_evaluator.TableEvaluator.visual_evaluation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot all visual evaluation metrics. Includes plotting the mean and standard deviation, cumulative sums, correlation differences and the PCA transform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs</strong> – any kwargs for matplotlib.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="viz.html" class="btn btn-neutral float-right" title="Viz" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to table evaluator’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Bauke Brenninkmeijer
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
